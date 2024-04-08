@@ -1,0 +1,431 @@
+<!DOCTYPE HTML>
+<!--
+	Telephasic by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-L9RVED7CXD"></script>
+		<script>
+ 			 window.dataLayer = window.dataLayer || [];
+  			function gtag(){dataLayer.push(arguments);}
+  			gtag('js', new Date());
+
+ 			 gtag('config', 'G-L9RVED7CXD');
+		</script>
+		
+		 <!-- For Form -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+            $("#submit").click(function(e) {
+                e.preventDefault();
+
+                var name = $("#name").val(),
+                    email = $("#email").val(),
+                    phone = $("#phone").val(),
+                    wsource = $("#wsource").val(),
+                    desc = $("#desc").val();
+
+                $.ajax({
+                    type: "POST",
+                    url: 'https://6632bs8ve0.execute-api.us-east-1.amazonaws.com/TestAPI/contact-us',
+                    contentType: 'application/json',
+                    data: JSON.stringify({
+                        'name': name,
+                        'phone':phone,
+                        'email': email,
+                        'desc': desc,
+                        'wsource': "www.BelavieVoyager.com Contact_EmailCapture"
+                    }),
+                    success: function(res){
+                        $('#form-response').text('Thank You -  Message Sent. We will be in touch shortly');
+                        
+					
+                    },
+                    error: function(){
+                        $('#form-response').text('Error.');
+                    }
+                });
+
+            })
+
+        });
+    </script>
+    
+		<title>BelavieVoyager Home </title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	</head>
+	<body class="homepage is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<div id="header-wrapper">
+					<div id="header" class="container">
+
+						<!-- Logo -->
+							<h1 id="logo"><a href="index.html">Belavie <img width="25" height="12"src="images/logosmall1.png" alt=" "> Voyager</a></h1>
+
+						<!-- Nav -->
+							<nav id="nav">
+								<ul>
+									<li>
+									
+										<p<><a href="#"><i class="fa fa-bars"></i></a></p>
+										<ul>
+											<li><a href="#wwa">Who We Are</a></li>
+											
+											<li><a href="#footer">Contact Us</a></li>
+											<li><a href="#clients">Our Clients</a></li>
+											<!--<li>
+												<a href="#">Hello About</a>
+												<ul>
+													<li><a href="#">Number 1</a></li>
+													<li><a href="#">Number 2</a></li>
+													<li><a href="#">Number 3</a></li>
+													<li><a href="#">Number 4</a></li>
+												</ul>
+											</li>
+											<li><a href="#">AboutTheBottom</a></li>--->
+										</ul>
+									</li>
+									<li><a href="#wwa">ABOUT</a></li>
+									<li class="break"><a href="#footer">CONTACT</a></li>
+									
+								</ul>
+							</nav>
+
+					</div>
+
+					<!-- Hero -->
+						<section id="hero" class="container">
+							<header>
+					
+								<h2 style="color:#492612">CRAFTING IMPACTFUL EVENTS</h2>
+							<h2 style="color:#492612">EXCEEDING EXPECTATIONS</h2>
+							</header>
+							
+							 <center><img src="images/logoheader.png" alt=" "></center>
+							 <h3 style="color:#492612">CORPORATE EVENTS</h3>
+							 <h3 style="color:#492612">HNW FAMILY REUNIONS</h3>
+							
+						</section>
+
+				</div>
+
+			<!-- Features 1 -->
+				<div class="wrapper">
+					<div class="container">
+						<div class="row">
+							<section class="col-6 col-12-narrower feature">
+								<div class="image-wrapper first">
+									<a href="#" class="image featured first"><img src="images/pic01.jpg" alt="" /></a>
+								</div>
+								<header>
+									<h2>Crafting Impactful Events: <br />
+									A Proven Approach</h2>
+								</header>
+								<p>Our unwavering commitment to delivering flawlessly executed, high-impact events has solidified our position as a trusted partner 
+								for a diverse range of organizations across the corporate, non-profit, and private sectors. We understand the profound influence that 
+								meticulously planned, dynamic, and insightful gatherings can have on your target audience. By fostering open communication and 
+								collaboration throughout the planning process, we leverage our proven track record and comprehensive industry knowledge to craft 
+								an event that not only surpasses your objectives but leaves a lasting impression on your attendees.</p>
+															</section>
+							<section class="col-6 col-12-narrower feature">
+								<div class="image-wrapper">
+									<a href="#" class="image featured"><img src="images/pic02.jpg" alt="" /></a>
+								</div>
+								<header>
+									<h2>Experience. Impact. <br />
+									Value.</h2>
+								</header>
+								<p>With over two decades of experience, we have a proven track record of successfully managing over 100 events, engaging audiences ranging 
+								from intimate groups of 25 to large conferences exceeding 1,000 attendees. Our team's expertise encompasses comprehensive needs analysis, 
+								precise project scoping, and strategic planning. This ensures flawless event execution and proactive risk management, specifically within 
+								the conference domain. We prioritize client satisfaction by adhering to budget constraints while identifying cost-saving measures to maximize your event's return on investment.</p>
+								</section>
+						</div>
+					</div>
+				</div>
+
+			
+
+			<!-- Features 2 -->
+				<div class="wrapper">
+					<section class="container">
+						<header class="major">
+							<h2> Craft Unforgettable Events: Your Essential Conference Blueprint </h2>
+							<h3>From Streamlined Planning to Lasting Impact: The Complete Conference Package</h3>
+						</header>
+						<div class="row features">
+							<section class="col-4 col-12-narrower feature">
+								<div class="image-wrapper first">
+									<a href="#" class="image featured"><img src="images/pic03.jpg" alt="" /></a>
+								</div>
+							<p><b>  Pre-Conference Preparation: Streamlining Your Event</b></p>
+
+									<p><b>Logistics & Planning:</b></p>
+
+									<li><b>Define:</b> Conference objectives, themes & agenda.</li>
+									<li><b>Secure:</b> Venue (best pricing/perks), AV company, dates & budget.</li>
+									<li><b>Arrange:</b> Accommodation, catering, entertainment, technical needs</li>
+									<br><p><b>Speakers & Content:</b></p>
+
+									<li><b>Coordinate:</b> Speaker schedules & communication.</li>
+									<li><b>Collect:</b> Presentation materials in advance.</li><br>
+									<p><b>Registration & Sales:</b></p>
+
+									<li><b>Establish:</b>  Online registration & manage ticket sales.</li>
+									<li><b>Implement</b>  (if needed): Promo codes for speakers, sponsors, BOD.</li><br><p>
+									<b>Networking:</b></p>
+
+									<li><b>Plan:</b>  Sessions, receptions, booths, & social events to foster interaction.</li><br>
+							</section>
+							<section class="col-4 col-12-narrower feature">
+								<div class="image-wrapper">
+									<a href="#" class="image featured"><img src="images/pic04.jpg" alt="" /></a>
+								</div>
+								<p><b> On-Site Management: Ensuring a Seamless Experience</b></p>
+								<p><b>Venue & Logistics:</b></p>
+								<li>Manage setup: Venue, registration, signage, decor, equipment.</li>
+								<li>Troubleshoot any on-site issues.</li>
+								<br><p><b>Event Operations:</b></p>
+								<li>Oversee: Check-in, catering, AV, and rooms.</li>
+								<br><p><b>Attendee Care:</b></p>
+								<li>Provide support, address concerns, and answer questions.</li>
+								<li>Gather feedback (surveys/comment cards).</li>
+								<br><p><b>Vendor & Sponsor Success:</b></p>
+								<li>Coordinate with sponsors & exhibitors.</li>
+								<li>Ensure alignment with conference goals.</li>
+							</section>
+							<section class="col-4 col-12-narrower feature">
+								<div class="image-wrapper">
+									<a href="#" class="image featured"><img src="images/pic05.jpg" alt="" /></a>
+								</div>
+								<p><b> Post-Conference: Maximizing Impact</b></p>
+								<p><b>Gratitude & Resources:</b></p>
+								<li>Send thank you notes & share presentations/resources.</li>
+								<br><p><b>Feedback & Analysis:</b></p>
+								<li>Gather & analyze feedback to optimize future events.</li>
+								<br><p><b>Financial Reporting:</b></p>
+								<li>Reconcile expenses, review budget & generate reports.</li>
+								<br><p><b>Evaluation & Improvement:</b></p>
+								<li>Document key takeaways & conduct a comprehensive evaluation. </li>
+								
+							</section>
+						</div>
+						
+						<header class="major">
+							<h2>Curated Family Retreats for High-Net-Worth Families</h2>
+							<h3>Where Legacy Meets Adventure: Create Lasting Memories and Strengthen Family Bonds.</h3>
+						</header>
+						<div class="row features">
+							<section class="col-4 col-12-narrower feature">
+								<div class="image-wrapper first">
+									<a href="#" class="image featured"><img src="images/pic03a.jpg" alt="" /></a>
+								</div>
+								
+								<p><b>Unforgettable Memories, Strengthened Bonds: </b> We specialize in 
+								crafting unforgettable experiences for high-net-worth families that 
+								prioritize quality time together.  Our comprehensive retreat planning 
+								leverages insider expertise, ensuring access to exclusive destinations, 
+								activities, and amenities.</p>
+							</section>
+							<section class="col-4 col-12-narrower feature">
+								<div class="image-wrapper">
+									<a href="#" class="image featured"><img src="images/pic04a.jpg" alt="" /></a>
+								</div>
+								<p><b>Strengthening Family Bonds & Business Legacy:</b> Recognizing the 
+								importance of family unity in successful multi-generational businesses, 
+								we offer retreats that foster growth and learning opportunities for all members.</p>
+								<br><p><b>Seamless Travel & Bespoke Experiences:</b> Our in-house travel advisors 
+								curate seamless travel arrangements (to, from, and within your chosen destination). 
+								We design engaging children's activities to entertain younger participants and 
+								facilitate connections with peers.</p>
+							</section>
+							<section class="col-4 col-12-narrower feature">
+								<div class="image-wrapper">
+									<a href="#" class="image featured"><img src="images/pic05a.jpg" alt="" /></a>
+								</div>
+								<p><b>Tailored Programming for Everyone:</b> From bespoke family experiences 
+								to curated "me-time" activities, we cater to all family members' interests.  
+								We can also facilitate business meeting coordination and educational programs, 
+								creating a perfect balance between family bonding and professional pursuits.</p>
+								<br><a style="color:black;"  href="https://BELAVIEVOYAGER.COM/belavievoyagerflyer.pdf" target="_blank">Download our HNW PDF Flyer</a><br>
+							</section>
+						</div>
+						
+					</section>
+				</div>
+					<!-- Content1 -->
+					<!-- Features 2 -->
+				<div class="wrapper">
+					<section class="container">
+						<header class="major">
+							<h2 id="wwa">WHO WE ARE </h2>
+							<h3>Belavie Voyager offers a comprehensive portfolio of event experiences.  
+							Our expertise spans large-scale annual events for corporations and non-profit 
+							organizations, as well as meticulously planned bespoke retreats for high-net-worth families.</h3>
+						</header>
+						<div class="row features">
+							<section class="col-4 col-12-narrower feature">
+								<div class="image-wrapper first">
+									<a href="#" class="image featured"><img src="images/sb_368.png" alt="" /></a>
+								</div>
+							
+							</section>
+							<section class="col-4 col-12-narrower feature">
+								<div class="image-wrapper">
+									<a href="#" class="image featured"><img src="images/jp_368.png" alt="" /></a>
+								</div>
+								
+							</section>
+							<section class="col-4 col-12-narrower feature">
+								<div class="image-wrapper">
+									<a href="#" class="image featured"><img src="images/lr_368.png" alt="" /></a>
+								</div>
+							</section>
+						</div>
+				</div>
+					<div class="wrapper">
+					<div class="container">
+						<div class="row">
+							<article id="content">
+								<h3><center>Meet the founders of Belavie Voyager.</center></h3>
+								<p><b>Susie:</b> Owner of Belavie, Susie has managed legal marketing and events for international law firms 
+								and wealth management organizations for over 15 years. Her clients include The Society of 
+								Trust and Estate Planners (STEP) Miami, STEP New York, STEP Gold Coast, EPC Miami, IFG 
+								Worldwide and Baker & McKenzie. She specializes in creating “green” events and offers 
+								clients the option to implement eco-friendly practices. She has an MBA in International 
+								Business from the University of Miami. Susie splits her time between Cape Cod, Massachusetts 
+								and Miami, Florida.</p>
+								<p><b>Laurence:</b> Creator of Voyager Traveling, Laurence is an Event Planner & Travel Advisor who has 
+								spent much of her life exploring the world. She was born in Paris, France and has lived 
+								and worked in more than 20 countries. She began her career working for an international 
+								resort company and moved to a senior management position with a successful Miami-based 
+								Destination Management Firm. Her experience includes organizing large, annual events around 
+								the world. Her clients include but are not limited to: Cartier, Dior, Givenchy, Hermes, 
+								LVMH and Montblanc. Laurence splits her time between Newport, Rhode Island and Miami, Florida.</p>
+								<p><b>John:</b> A seasoned executive with over 20 years of experience building successful companies from 
+								the ground up, former Chief Operating Officer, John thrives in fast-paced environments.  
+								He possesses a proven track record of managing operations, people, technology, products, 
+								and finances across diverse industries. Recognized for strategic planning, financial analysis, 
+								contract negotiation, and technical implementation skills, John fosters a collaborative approach 
+								and excels at building strong relationships with clients, partners, and vendors. John splits her time between 
+								Newport, Rhode Island and Miami Beach, Florida.</p>
+								<p><b><center>From meticulous planning to flawless execution: Professionalism is the cornerstone of unforgettable conferences.</center></b></p>
+								<p><b><center>Let Belavie Voyager create your next event experience.</center></b></p>
+							</article>
+					</div>
+					</div>
+					</div>
+					<!-- Main -->
+				<div class="wrapper">
+					<div class="container" id="main">
+
+						<!-- Content -->
+							<article id="content">
+								<header>
+									<h2 id="clients">Crafting Exceptional Events for Every Industry - Our Clients</h2>
+									<h3>From global brands to non-profit organizations, we tailor conference experiences to achieve your goals.</h3>
+								</header>
+								<a href="#" class="image featured"><img src="images/pic06.jpg" alt="" /></a>
+								<p>We understand the diverse needs of high-end clientele across Asia, 
+								Europe, North, and South America. Our impressive roster includes global 
+								brands like McDonald's and Cartier, alongside legal and financial institutions. 
+								Whether you're a non-profit advocating for social good or a pharmaceutical leader, 
+								we excel at crafting exceptional conference experiences.</p>
+								
+							</article>
+
+						<div class="row features">
+							<section class="col-4 col-12-narrower feature">
+							<h3>Naomi Campbell Retrospective </h3>
+								<iframe width="368" height="189	" src="https://www.youtube.com/embed/N1-hN6AOEEM?si=6HtLc_8xW2FcaIL9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+							</section>
+							<section class="col-4 col-12-narrower feature">
+								<div class="image-wrapper">
+								<h3>Your Partner for Global Events</h3>
+									<a href="#" class="image featured"><img src="images/pic09a.jpg" alt="" /></a>
+								</div>
+							</section>
+							<section class="col-4 col-12-narrower feature">
+							<h3>Step Miami Summit 2024</h3>
+								<iframe width="368" height="189" src="https://www.youtube.com/embed/IUr4c2Cpy5I?si=UglU0b0CJUPsBL6m" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+							</section>
+						</div>
+					</div>
+				</div>
+			<!-- Footer -->
+				<div id="footer-wrapper">
+					<div id="footer" class="container">
+						<header class="major">
+							<h2>Connect with Us.</h2>
+							<h3>Get in touch and discuss your needs.<br>
+							Your Questions. Our Expertise.</h3>
+						</header>
+						<div class="row">
+							<section class="col-6 col-12-narrower">
+								<form data-form-type="contact" method="GET" action="#" onsubmit="myButton.disabled = true; return true;">
+									<div class="row gtr-50">
+										<div class="col-6 col-12-mobile">
+										
+											<input name="name" placeholder="Name" id="name" type="text" data-constraints="@Required"/>
+										</div>
+										<div class="col-6 col-12-mobile">
+											<input name="email" id="email" placeholder="Email" type="email" data-constraints="@Email @Required" />
+										</div>
+										<div class="col-12">
+											<textarea name="desc" id="desc"  placeholder="Message" data-constraints="@Required"></textarea>
+										</div>
+										<div class="col-12">
+											<ul class="actions">
+												<li><input type="submit" id="submit" value="Send Message" /></li>
+												<li><input type="reset" value="Clear form" /></li>
+											</ul>
+										</div>
+									</div>
+								</form>
+								 <div id="form-response"></div>
+							</section>
+							<section class="col-6 col-12-narrower">
+								<div class="row gtr-0">
+									<ul class="divided icons col-6 col-12-mobile">
+										<li class="fa fa-envelope"><a href="mailto:info@BelavieVoyager.com"><span class="extra"></span>info@BelavieVoyager.com</a></li>
+										<li class="fa fa-phone"><a href="tel:+17864826764"><span class="extra"></span>+1 786-482-6764</a></li>
+										<li class="icon brands fa-linkedin"><a href="#"><span class="extra">LinkedIn/</span>untitled</a></li>
+									</ul>
+									<!---<ul class="divided icons col-6 col-12-mobile">
+										<li class="icon brands fa-instagram"><a href="#"><span class="extra">instagram.com/</span>untitled</a></li>
+										<li class="icon brands fa-youtube"><a href="#"><span class="extra">youtube.com/</span>untitled</a></li>
+										<li class="icon brands fa-pinterest"><a href="#"><span class="extra">pinterest.com/</span>untitled</a></li>
+									</ul>--->
+								</div>
+							</section>
+						</div>
+					</div>
+					<div id="copyright" class="container">
+						<ul class="menu">
+							<li>&copy;2024 BelavieVoyager.com. All rights reserved. </li><li></li>
+						</ul>
+					</div>
+				</div>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
